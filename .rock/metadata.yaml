@@ -1,0 +1,64 @@
+name: ali-test-rock
+title: Ali Test Rock
+maintainers:
+  - name: Alimot
+    email: alimot.akinbode@canonical.com
+    github: https://github.com/codeempress1
+
+website: https://example.com
+source: https://github.com/alimot/portfolio-rock
+issues: https://github.com/alimot/portfolio-rock/issues
+documentation: https://example.com/docs
+channels:
+  stable:
+    revision: 12
+    description: |
+      Production-ready release of Portfolio Rock.
+      Verified and tested build, suitable for store showcase.
+    version: 1.0.2
+    last-updated: 2025-10-20
+    size: 49.6 MB
+    digest: sha256:a3f0b1e21fdf66b92c3b3c178c51a7c2c1f4d1a6
+    base: ubuntu@22.04
+  edge:
+    revision: 15
+    description: |
+      Latest development version of the Portfolio Rock with new styles and optimizations.
+      May include experimental features.
+    version: 1.1-dev
+    last-updated: 2025-10-19
+    size: 50.1 MB
+    digest: sha256:d1f7e88f82ab1d919a02ed452dbcb2e3e943c5a4
+    base: ubuntu@22.04
+
+quality: full
+security:
+  cves:
+    - id: CVE-2025-0123
+      title: Flask template rendering XSS vulnerability
+      description: |
+        A vulnerability was discovered in Flask <3.1.0 where unsafe template
+        variables could lead to reflected cross-site scripting (XSS) in
+        certain edge cases.
+      severity: medium
+      status: fixed
+      affected_versions:
+        - <=3.0.3
+      fixed_version: 3.1.0
+      patch_url: https://github.com/pallets/flask/pull/5309
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2025-0123
+        - https://security.ubuntu.com/portfolio-rock/cves/CVE-2025-0123
+
+    - id: CVE-2024-22987
+      title: Werkzeug URL parser denial of service
+      description: |
+        A potential DoS condition was identified in Werkzeug’s URL parsing logic
+        when processing malformed URLs with deeply nested query strings.
+      severity: low
+      status: not-affected
+      affected_versions:
+        - <=2.3.7
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2024-22987
+  support: community

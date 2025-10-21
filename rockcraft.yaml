@@ -1,0 +1,55 @@
+name: ali-test-rock
+base: bare
+build-base: ubuntu@22.04
+version: "0.1"
+summary: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+description: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
+platforms:
+  amd64:
+
+extensions:
+  - flask-framework
+# uncomment the sections you need and adjust according to your requirements.
+# parts:  # you need to uncomment this line to add or update any part.
+
+#   flask-framework/install-app:
+#     prime:
+#       # by default, only the files in app/, templates/, static/, migrate, migrate.sh,
+#       # migrate.py and app.py are copied into the image. You can modify the list
+#       # below to override the default list and include or exclude specific
+#       # files/directories in your project.
+#       # note: prefix each entry with "flask/app/" followed by the local path.
+#       - flask/app/.env
+#       - flask/app/app.py
+#       - flask/app/webapp
+#       - flask/app/templates
+#       - flask/app/static
+
+# you may need Ubuntu packages to build a python dependency. Add them here if necessary.
+#   flask-framework/dependencies:
+#     build-packages:
+#       # for example, if you need pkg-config and libxmlsec1-dev to build one
+#       # of your packages:
+#       - pkg-config
+#       - libxmlsec1-dev
+
+# you can add package slices or Debian packages to the image.
+# package slices are subsets of Debian packages, which result
+# in smaller and more secure images.
+# see https://documentation.ubuntu.com/rockcraft/en/1.14.0/explanation/chisel/
+
+# add this part if you want to add packages slices to your image.
+# you can find a list of packages slices at https://github.com/canonical/chisel-releases
+#   runtime-slices:
+#     plugin: nil
+#     stage-packages:
+#       # list the required package slices for your flask application below.
+#       # for example, for the slice libs of libpq5:
+#       - libpq5_libs
+
+# if you want to add a Debian package to your image, add the next part
+#   runtime-debs:
+#     plugin: nil
+#     stage-packages:
+#       # list required Debian packages for your flask application below.
+#       - libpq5
